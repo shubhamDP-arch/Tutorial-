@@ -5,7 +5,7 @@ import {app} from './app.js'
 //configs
 
 dotenv.config({
-  path:'.env'
+  path:'./.env'
 })
 
 

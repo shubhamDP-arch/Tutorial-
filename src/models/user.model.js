@@ -2,7 +2,7 @@ import mongoose, {Schema} from "mongoose";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 
-const UserSchema = new Schema({
+const userSchema = new Schema({
   username:{
     type: String,
     trim: true,
@@ -12,6 +12,7 @@ const UserSchema = new Schema({
     index: true
   },
   email:{
+    type:String,
     trim: true,
     lowercase: true,
     required:true,
@@ -19,6 +20,7 @@ const UserSchema = new Schema({
    
   },
   fullname:{
+    type:String,
     trim: true,
     required:true,
     index:true
@@ -32,7 +34,7 @@ const UserSchema = new Schema({
   },
   watchHistory:[
     {
-      type: Schema.type.ObjectId,
+      type: Schema.Types.ObjectId,
       ref:"Video"
     }
   ],
